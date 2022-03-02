@@ -121,7 +121,7 @@ export default Vue.extend({
           size: 20,
           number: query.page
         },
-        sort: query.q === '' ? '-active' : undefined,
+        sort: query.q  ? undefined : '-active',
         q: query.q,
         filter: {
           active: false,
