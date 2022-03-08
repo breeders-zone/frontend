@@ -2,7 +2,7 @@
   <div class="w-full bg-white">
     <div class="w-full bg-gray-200">
       <div class="container py-8">
-        <h3 class="font-bold text-xl mb-3">Найдите в товар:</h3>
+        <h3 class="font-bold text-xl mb-3">Найдите товар:</h3>
         <div class="flex items-center rounded bg-white">
           <input
             v-model="q"
