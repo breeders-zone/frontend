@@ -33,7 +33,7 @@ ARG YANDEX_METRIKA_ID
 ENV YANDEX_METRIKA_ID $YANDEX_METRIKA_ID
 
 COPY . /var/www
-RUN npm cache clean --force && rm package-lock.json && npm i
+RUN npm cache clean --force && npm i
 
 ENV NODE_ENV=production
 
@@ -44,6 +44,7 @@ FROM node:16-alpine3.11
 WORKDIR /var/www
 
 COPY package.json .
+COPY package-lock.json .
 COPY nuxt.config.js .
 COPY --from=build /var/www/node_modules ./node_modules
 COPY --from=build /var/www/.nuxt ./.nuxt
