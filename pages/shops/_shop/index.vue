@@ -29,20 +29,12 @@
         <div
           v-if="
             shop.vk ||
-            shop.instagram ||
-            shop.facebook ||
             shop.youtube
           "
           class="p-4 shadow rounded-lg flex"
         >
           <a v-if="shop.vk" target="_blank" :href="shop.vk" class="p-2 transition duration-150 text-green-600 hover:text-green-700 mr-3">
             <FontAwesomeIcon :icon="['fab', 'vk']" size="lg"/>
-          </a>
-          <a v-if="shop.instagram" target="_blank" :href="shop.instagram" class="p-2 transition duration-150 text-green-600 hover:text-green-700 mr-3">
-            <FontAwesomeIcon :icon="['fab', 'instagram']" size="lg"/>
-          </a>
-          <a v-if="shop.facebook" target="_blank" :href="shop.facebook" class="p-2 transition duration-150 text-green-600 hover:text-green-700 mr-3">
-            <FontAwesomeIcon :icon="['fab', 'facebook']" size="lg"/>
           </a>
           <a v-if="shop.youtube" target="_blank" :href="shop.youtube" class="p-2 transition duration-150 text-green-600 hover:text-green-700">
             <FontAwesomeIcon :icon="['fab', 'youtube']" size="lg"/>
