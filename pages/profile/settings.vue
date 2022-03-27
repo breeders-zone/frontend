@@ -341,46 +341,6 @@
         </div>
         <div class="flex md:flex-row flex-col mb-4">
           <div class="md:w-2/12 w-full">
-            <label for="facebook" class="text-gray-800 font-semibold">Facebook</label>
-          </div>
-          <div class="md:w-6/12 w-full flex flex-col">
-            <ValidationProvider name="facebook" v-slot="{ errors }">
-              <input
-                id="facebook"
-                name="facebook"
-                v-model="formValues.facebook"
-                type="text"
-                class="forms-input w-full"
-              >
-              <div class="mt-1">
-                <div class="text-red-500" v-for="error in errors">{{error}}</div>
-                <div class="text-red-500" v-for="error in serverErrors.facebook">{{error}}</div>
-              </div>
-            </ValidationProvider>
-          </div>
-        </div>
-        <div class="flex md:flex-row flex-col mb-4">
-          <div class="md:w-2/12 w-full">
-            <label for="facebook" class="text-gray-800 font-semibold">Instagram</label>
-          </div>
-          <div class="md:w-6/12 w-full flex flex-col">
-            <ValidationProvider name="instagram" v-slot="{ errors }">
-              <input
-                id="instagram"
-                name="instagram"
-                v-model="formValues.instagram"
-                type="text"
-                class="forms-input w-full"
-              >
-              <div class="mt-1">
-                <div class="text-red-500" v-for="error in errors">{{error}}</div>
-                <div class="text-red-500" v-for="error in serverErrors.instagram">{{error}}</div>
-              </div>
-            </ValidationProvider>
-          </div>
-        </div>
-        <div class="flex md:flex-row flex-col mb-4">
-          <div class="md:w-2/12 w-full">
             <label for="facebook" class="text-gray-800 font-semibold">YouTube</label>
           </div>
           <div class="md:w-6/12 w-full flex flex-col">
