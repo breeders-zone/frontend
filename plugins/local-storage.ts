@@ -17,7 +17,7 @@ const localStorage: Plugin = ({ store, req, $cookies }) => {
       getItem: key => process.client ? $cookies.get(key) : cookie.parse(req.headers.cookie || '')[key],
       // js-cookie can handle setting both client-side and server-side cookies with one method
       // use isDev to determine if the cookies is accessible via https only (i.e. localhost likely won't be using https)
-      setItem: (key, value) => $cookies.set(key, value, { maxAge: 60 * 60 * 24 * 14}),
+      setItem: (key, value) => $cookies.set(key, value, { maxAge: 60 * 60 * 24 * 14, path: '/'}),
       // also allow js-cookie to handle removing cookies
       removeItem: key => $cookies.remove(key)
     }
