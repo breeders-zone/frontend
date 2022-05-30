@@ -230,6 +230,10 @@ class ApiService {
       .then((data) => data);
   }
 
+  notifyNewMessage = async (user_id: string): Promise<any> => {
+    return await this.api.$post(`users/${user_id}/notify`, {});
+  };
+
   // Documents
 
   getDocuments = async (): Promise<Array<IDocument>> => {

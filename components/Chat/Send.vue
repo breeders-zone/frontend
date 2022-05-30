@@ -134,6 +134,8 @@ export default Vue.extend({
               createdAt: firebase.database.ServerValue.TIMESTAMP
             });
 
+            this.$api.notifyNewMessage(this.product.shop.id)
+
             this.success = true;
             setTimeout(() => this.$emit('close'), 3000)
             resolve(true);
@@ -168,7 +170,7 @@ export default Vue.extend({
               creator: String(this.user.id),
               text: this.message.trim(),
               createdAt: firebase.database.ServerValue.TIMESTAMP
-            })
+            }).then(() => this.$api.notifyNewMessage(this.product.shop.id))
 
             await this.$fire.database.ref(`users/${this.user.id}`).update({
               [chatKey]: true
