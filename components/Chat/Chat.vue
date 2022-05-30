@@ -658,6 +658,9 @@ export default Vue.extend({
         text: this.message.trim(),
         createdAt:firebase.database.ServerValue.TIMESTAMP
       }).then(() => {
+        this.selectedChat.members.filter((m: IUser) => m.id != this.user.id)
+          .map((m: IUser) =>  this.$api.notifyNewMessage(m.id))
+
         this.$nextTick(() => (this.$refs as any).chatFeed.scrollTo(
           {
             y: "100%"
