@@ -330,7 +330,7 @@
                         id="groupMale"
                         name="groupMale"
                         v-model="formValues.groupMale"
-                        type="text"
+                        type="number"
                         class="forms-input"
                       >
                       <label for="groupMale">Самцов</label>
@@ -348,7 +348,7 @@
                         id="groupFemale"
                         name="groupFemale"
                         v-model="formValues.groupFemale"
-                        type="text"
+                        type="number"
                         class="forms-input"
                       >
                       <label for="groupFemale">Самок</label>
@@ -506,6 +506,8 @@ export default Vue.extend({
     submit() {
       const product: any = {
         ...this.formValues,
+        groupMale: this.formValues.sex === 'group' ? Number(this.formValues.groupMale) : null,
+        groupFemale: this.formValues.sex === 'group' ? Number(this.formValues.groupFemale) : null,
         cb: moment(this.formValues.cb).add(4, 'hours'),
         tmpImages: this.images.map((i: any) => i.tmpId),
         tmpMorphs: this.morphs.map(m => ({
