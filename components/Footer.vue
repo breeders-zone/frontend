@@ -17,7 +17,6 @@
       </div>
       <div class="md:w-4/12 w-full md:text-right">
         <h3 class="text-gray-500 font-semibold">© {{new Date().getFullYear()}} Breeder Zone - маркетплейс для продажи животных</h3>
-        <p class="text-gray-500">ИП Поярков А. С.</p>
       </div>
     </div>
   </footer>
